@@ -11,4 +11,19 @@ public class BinaryTree {
 		this.root = root;
 	}
 	
+	//前序遍历
+	public void frontShow() {
+		root.frontShow();
+	}
+	
+	public void midleShow() {
+		root.midleShow();
+	}
+	
+	public void afterShow() {
+		root.afterShow();
+
+	}
+	
+	
 }
