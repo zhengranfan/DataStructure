@@ -25,5 +25,7 @@ public class BinaryTree {
 
 	}
 	
-	
+	public TreeNode frontSearch(int value) {	
+		return  root.frontSearch(value);
+	}
 }

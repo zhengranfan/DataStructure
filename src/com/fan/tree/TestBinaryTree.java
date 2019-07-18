@@ -29,6 +29,11 @@ public class TestBinaryTree {
 	System.out.println();
 	System.out.println("后序遍历:");
 	binaryTree.afterShow();
+	System.out.println();
+	
+	System.out.println(binaryTree.frontSearch(7).getValue());
+	
+	
 
 		
 	}

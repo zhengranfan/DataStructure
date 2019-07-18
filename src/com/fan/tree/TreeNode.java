@@ -1,6 +1,6 @@
 package com.fan.tree;
 
-import java.util.concurrent.locks.ReadWriteLock;
+import java.lang.annotation.Target;
 
 public class TreeNode {
 	private int value;
@@ -13,6 +13,16 @@ public class TreeNode {
 
 	public TreeNode getLeftNode() {
 		return leftNode;
+	}
+	
+	
+
+	public int getValue() {
+		return this.value;
+	}
+
+	public void setValue(int value) {
+		this.value = value;
 	}
 
 	public void setLeftNode(TreeNode leftNode) {
@@ -61,5 +71,26 @@ public class TreeNode {
 	}
 	
 	
+	//前序查找
+	public TreeNode frontSearch(int value) {
+		TreeNode targetNode = null;
+		if(this.value == value ) {
+			return this;
+		}
+		if(leftNode != null) {
+			targetNode = leftNode.frontSearch(value);
+		}
+		if(targetNode != null) {
+			return targetNode;
+		}
+		
+		if(rightNode != null) {
+			targetNode = rightNode.frontSearch(value);
+		}
+		
+		return targetNode;
+	}
+	
+		
 
 }
